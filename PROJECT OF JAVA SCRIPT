@@ -1,0 +1,42 @@
+let gallery = [];
+
+    function addArtwork(artist, title, medium, year, dimensions, value) {
+        const artwork = {
+            artist: artist,
+            title: title,
+            medium: medium,
+            year: year,
+            dimensions: dimensions,
+            value: value
+        };
+        gallery.push(artwork);
+    }
+
+    function displayArtworks() {
+        console.log("Art Gallery:");
+        for (let i = 0; i < gallery.length; i++) {
+            const artwork = gallery[i];
+            console.log("Artist:", artwork.artist);
+            console.log("Title:", artwork.title);
+            console.log("Medium:", artwork.medium);
+            console.log("Year Created:", artwork.year);
+            console.log("Dimensions:", artwork.dimensions);
+            console.log("Value:", artwork.value);
+            console.log("\n\n");
+        }
+    }
+
+    function totalArtworks() {
+        return gallery.length;
+    }
+
+    addArtwork("Vincent van Gogh", "Starry Night", "Oil on canvas", 1889, "73.7 cm × 92.1 cm", "$100 million");
+    addArtwork("Leonardo da Vinci", "Mona Lisa", "Oil on poplar", 1503, "77 cm × 53 cm", "Invaluable");
+    addArtwork("Pablo Picasso", "Guernica", "Oil on canvas", 1937, "349.3 cm × 776.6 cm", "$200 million");
+    addArtwork("Claude Monet", "Water Lilies", "Oil on canvas", 1916, "200 cm × 425 cm", "$80 million");
+    addArtwork("Edvard Munch", "The Scream", "Oil, tempera, pastel and crayon on cardboard", 1893, "91 cm × 73.5 cm", "$120 million");
+
+    displayArtworks();
+
+    const totalGalleryArtworks = totalArtworks();
+    console.log("Total Artworks in Gallery: " + totalGalleryArtworks);
